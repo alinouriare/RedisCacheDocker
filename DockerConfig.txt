@@ -1,0 +1,53 @@
+docker build --tag aspnetapp .
+
+docker image ls
+
+docker run -p 4000:80 aspnetapp 
+
+
+docker tag aspnetapp alinouriare/get-started:part2
+
+docker push alinouriare/get-started:part2
+-------------------
+
+docker run --rm -it -v ${PWD}:C:\myapp\WebApplication\WebApplication\bin\Release\netcoreapp3.1 mcr.microsoft.com/dotnet/core/runtime:3.1
+
+docker build -t alinouriare/classtext .
+
+------------------------------
+
+From mcr.microsoft.com/dotnet/core/aspnet:3.1
+
+WORKDIR /app
+
+COPY bin\Debug\netcoreapp3.1 .
+
+ENTRYPOINT ["dotnet","WebApplication.dll"]
+
+-----------------------
+
+docker build -t alinouriare/classtext .
+---------------------
+docker build -t alinouriare/classtext --no-cache --rm=false .
+----------------------------------------------
+docker inspect id ----ip
+
+docker run nameimage
+--------------------------------redis ---------------------------------------
+change setting and reset  "experimental": true
+docker pull redis
+
+
+docker run --name local-redis -p 6379:6379 -d redis
+
+
+docker ps -all
+
+docker start local-redis
+
+docker ps
+
+docker logs -f local-redis
+
+
+docker exec -it local-redis /bin/bash
