@@ -1,0 +1,53 @@
+------------string 512kb sie--------------- 
+redis-cli
+monitor
+set key  value
+get key
+-----------------
+set id 1
+incr id
+decr id
+------------------
+expire id 30
+ttl id
+persist id
+-----------
+set user "ali"
+append user "aaa"
+strlen user
+GetRange user 0 6
+-----------------------list------------------------
+LPUSH mylist 1
+LPUSH mylist "ali"
+LRANGE mylist 0 20
+end list add--------------
+RPUSH mylist 5
+LINDEX mylist 0
+LREM mylist count value
+----------------SET------------not repeat value------------------
+ 
+sadd news 55
+SCARD news         -----count total
+SMEMBERS news    
+sdiff news1 news2
+sunion news1 news2
+-----------------------hset-----------best store object---------
+hset users1 firstname "alinouri"
+hset users1 age 30
+hmset users2 name "ali" lastname "nouri"
+hget users1 age
+hmget users2 name lastname
+HKEYS users2
+HGETALL users2
+HEXISTS users2 lastname
+-----------------sort
+ZADD lan 1 asp
+ZADD lan 2 c
+ZRANGE lan 0 100
+-------------------publish and subscribe mediator-------------
+publish blue "Messgae01 blue"  ---------blue name channel
+ SUBSCRIBE blue -----------onther server read message channel blue
+----------------package 
+
+-ServiceStack.Redis
+-------------------------------------------
