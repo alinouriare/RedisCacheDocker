@@ -1,0 +1,19 @@
+# info
+----------------store
+aof and rdb
+----------------------best aof ---log file write store
+save
+bgsave
+--------------------
+ CONFIG GET appendonly
+ CONFIG GET asfdsf
+ CONFIG GET port
+ CONFIG SET appendonly yes
+ fsync--------------ram to hard --on=>os =>always security low performance
+ ---------------------------------------
+  CONFIG SET requirepass "mypass"
+  AUTH mypass
+ ---------------------------------------------
+ redis-cli -a mypass
+ ----------------------------------
+ 
